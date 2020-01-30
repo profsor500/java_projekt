@@ -15,18 +15,19 @@ public class FriendlyClass {
             }
             i++;
         }
-        i=2;
-        warunek=b;
-        while(i<warunek)
-        {
-            if(b%i==0)
-            {
-                suma2 += i;
-                suma2 += b / i;
-                warunek = (b / i) - 1;
+        if(suma1==b) {
+            i = 2;
+            warunek = b;
+            while (i < warunek) {
+                if (b % i == 0) {
+                    suma2 += i;
+                    suma2 += b / i;
+                    warunek = (b / i) - 1;
+                }
+                i++;
             }
-            i++;
+            if(suma2==a) return  true;
         }
-        if((suma1==b)&(suma2==a)) return true; else return false;
+        return false;
     }
 }
